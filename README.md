@@ -20,3 +20,6 @@ curl -X POST -H "Authorization: Bearer <token>" http://localhost:8080/revoke
 curl -X POST -H "Authorization: Bearer <token>" http://localhost:8080/refresh
 
 
+Note :
+After hitting Signin API copy the token and provide that token in the authorization as a bearer token in access protected route, revoke token, and refresh token.
+
