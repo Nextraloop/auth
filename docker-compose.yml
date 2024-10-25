@@ -1,0 +1,18 @@
+version: '3'
+services:
+  auth-service:
+    build: .
+    ports:
+      - "8080:8080"
+    environment:
+      - JWT_SECRET=mysecretkey
+    depends_on:
+      - db
+  db:
+    image: postgres:latest
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: authdb
+    ports:
+      - "5432:5432"
